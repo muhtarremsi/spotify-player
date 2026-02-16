@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 function PlayerContent() {
   const searchParams = useSearchParams();
   const trackId = searchParams.get('id') || '4cOdK2wG2ZIB99Z9P9q0nc'; // Default Song
-  const [track, setTrack] = useState(null);
+  const [track, setTrack] = useState<any>(null);
 
   useEffect(() => {
     fetch(`/api/track?id=${trackId}`)
